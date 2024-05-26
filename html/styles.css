@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #E4E2DD; /* Couleur de fond principale */
+    color: #333; /* Couleur de texte principale */
+    min-height: 100vh; /* Hauteur minimale de la page pour forcer le footer en bas */
+    display: flex;
+    flex-direction: column; /* Utilisation de flexbox pour structurer la page */
+}
+
+header {
+    background-color: #004AAD; /* Couleur de l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    height: 100px; /* Hauteur de la navbar */
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    height: 100px; /* Hauteur fixe pour le logo */
+    width: auto; /* Assurer la largeur adaptative du logo */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Pour étirer le contenu principal */
+    display: flex;
+    flex-direction: column; /* Pour empêcher les vacations de sortir de l'écran */
+    overflow-y: auto; /* Activation du défilement vertical si nécessaire */
+}
+
+section#vacations {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.vacation {
+    background-color: #004AAD; /* Couleur de fond pour chaque section de lieu */
+    border: 1px solid #004AAD;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    color: white;
+    text-align: center; /* Centrage du contenu */
+}
+
+.carousel {
+    height: 300px; /* Hauteur fixe pour le carrousel */
+}
+
+.carousel img {
+    height: 300px; /* Hauteur fixe pour les images du carrousel */
+    width: auto; /* Assurer la largeur adaptative des images */
+    object-fit: cover; /* Assurer que les images remplissent complètement leur conteneur */
+    border-radius: 10px;
+}
+
+.calendar {
+    margin-bottom: 15px;
+}
+
+.booking-form {
+    max-width: 300px;
+    margin: 0 auto; /* Centrer le formulaire sur la page */
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.booking-form button {
+    background-color: #E4E2DD; /* Couleur du bouton */
+    color: #004AAD; /* Couleur du texte du bouton */
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #73866D; /* Couleur du bouton au survol */
+    color: white;
+}
+
+.booking-status {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    background-color: #D1AECA; /* Couleur de fond pour le statut de réservation */
+    color: #333; /* Couleur du texte pour le statut de réservation */
+}
+
+footer {
+    background-color: #004AAD; /* Couleur du footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    flex-shrink: 0; /* Empêcher le footer de rétrécir */
+}

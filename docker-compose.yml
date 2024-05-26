@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: my-nginx-container
+    ports:
+      - "17080:80"  # Rediriger le port 8080 de l'hôte vers le port 80 du conteneur Nginx
+    volumes:
+      - ./html:/usr/share/nginx/html  # Montage du dossier contenant votre site web HTML, CSS, JavaScript, etc.
+    networks:
+      - webnet
+
+networks:
+  webnet:
